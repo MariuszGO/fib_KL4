@@ -5,14 +5,15 @@
 
         public static void Fibonacci(int n)
         {
-           
+            
             int i = 0;
-            Int128 max;
+            Int128 max,zmienna_tmp;
             Int128.TryParse("170141183460469231731687303715884105727",out max);
 
             Console.WriteLine("Max: " + max);
 
             Int128[] fib = new Int128[n];
+            char[] liczba_binarna = new char[128];
 
             fib[0] = 0;
             fib[1] = 1;
@@ -22,12 +23,27 @@
             {
 
                 fib[i] = fib[i - 1] + fib[i - 2];
+                zmienna_tmp = fib[i];
 
-                if (fib[i] > max && fib[i - 1] < fib[i] && fib[i] > 0)
+                //dla inta  Convert.ToString(fib[i], 2);
+
+                for (int j = 127; j >= 0; j--)
                 {
-                    Console.WriteLine("Max reached at index: " + i);
-                    break;
+                    liczba_binarna[j] = (zmienna_tmp & 1) == 1 ? '1' : '0';
+                    zmienna_tmp >>= 1;
                 }
+
+
+
+                // if (fib[i] > max && fib[i - 1] < fib[i] && fib[i] > 0)
+                // {
+                zmienna_tmp = fib[i];
+                zmienna_tmp.ToString();
+
+                Console.WriteLine("Max reached at index: " + i);
+                Console.WriteLine(liczba_binarna);
+                   // break;
+              // }
                 Console.WriteLine(i+  " " + fib[i] + " ");
             }
 
