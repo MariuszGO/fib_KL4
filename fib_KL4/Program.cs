@@ -2,9 +2,8 @@
 {
     internal class Program
     {
-        public static void Fibonacci(int n)
-        {
-            
+        public static void Fibonacci(int n) { 
+
             int i = 0;
             Int128 max,zmienna_tmp;
             Int128[] fib = new Int128[n];
