@@ -29,7 +29,7 @@
                 for (int j = 127; j >= 0; j--)
                 {
                     liczba_binarna[j] = (zmienna_tmp & 1) == 1 ? '1' : '0';
-                    zmienna_tmp >>= 1;
+                    zmienna_tmp >>= 1; //kkkk
                 }
 
                 if (liczba_binarna[0] == '1')
@@ -37,17 +37,17 @@
                     break;
                 }
 
-                zmienna_tmp = fib[i];
+              //  zmienna_tmp = fib[i];
                 zmienna_tmp.ToString();
 
-                Console.WriteLine("Max reached at index: " + i);
-                Console.WriteLine(liczba_binarna);
+                
+               // Console.WriteLine(liczba_binarna);
                 Console.WriteLine(i + " " + fib[i] + " ");
             }
         }
         static void Main(string[] args)
         {
-            Fibonacci(200);
+            Fibonacci(20);
 
         }
     }
