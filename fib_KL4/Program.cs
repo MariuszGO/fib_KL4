@@ -37,14 +37,22 @@
 
                 // if (fib[i] > max && fib[i - 1] < fib[i] && fib[i] > 0)
                 // {
-                zmienna_tmp = fib[i];
-                zmienna_tmp.ToString();
 
-                Console.WriteLine("Max reached at index: " + i);
-                Console.WriteLine(liczba_binarna);
-                   // break;
-              // }
-                Console.WriteLine(i+  " " + fib[i] + " ");
+              if (liczba_binarna[0] == '1')
+              {
+                    break;
+                }
+
+                zmienna_tmp = fib[i];
+                    zmienna_tmp.ToString();
+
+                    Console.WriteLine("Max reached at index: " + i);
+                    Console.WriteLine(liczba_binarna);
+                    // break;
+                    // }
+                    Console.WriteLine(i + " " + fib[i] + " ");
+
+              
             }
 
 
